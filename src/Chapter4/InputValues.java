@@ -67,7 +67,7 @@ public class InputValues implements Serializable {
 	public void setMemo(String memo){
 		this.memo = memo;
 	}
-	public String getSubmit() {
+	public String getSubmit1() {	//ここをgetSubmit()からgetSubmit1()へ変更
 		return submit1;
 	}
 	public void setSubmit1(String submit1){

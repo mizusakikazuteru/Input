@@ -10,7 +10,7 @@
 </head>
 <body>
 <h3>数当てゲーム</h3>
-<form action="kazuate" method="post">
+<form action="kazuateValidation" method="post">
 正解は、0～99の数値になります。<br />
 正解だと思う値を入力して下さい :<input type="text" name="num" /><br />
 <input type="submit" name="guess" value="当てる!"/><br/>

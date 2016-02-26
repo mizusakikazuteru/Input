@@ -14,14 +14,14 @@ import javax.servlet.http.HttpServletResponse;
 
 
 
-@WebServlet(urlPatterns = {"/inputs"})
+@WebServlet("/chap04/inputs") //ここを変更！/inputsから/chap04/inputsへ！
 public class InputsServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	@Override
 	protected void service(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-
+		request.setCharacterEncoding("UTF-8");		//ここを追加　文字化け対策。
 		response.setContentType("text/html; charset=UTF-8");
 
 		Map<String, String[]> parameterMap = request.getParameterMap();
@@ -42,7 +42,7 @@ public class InputsServlet extends HttpServlet {
 
 		request.setAttribute("inputsResult", inputsResult);
 
-		RequestDispatcher dispatcher = request.getRequestDispatcher("inputs.jsp");
+		RequestDispatcher dispatcher = request.getRequestDispatcher("inputsjsp.jsp"); //ここを変更 inputs.jspからinputsjsp.jspへ
 
 		dispatcher.forward(request, response);
 	}

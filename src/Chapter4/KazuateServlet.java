@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 
 
 
-@WebServlet(urlPatterns = {"/kazuate"})
+@WebServlet("/chap04/kazuate") //ここ　/kazuateから/chap04/kazuateに変更
 public class KazuateServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
